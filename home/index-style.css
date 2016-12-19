@@ -245,15 +245,10 @@ transition: transform  0.7s ease;
       width: 80%;
       margin:3% auto 0 auto;
   }
-  .course-content-list h3{     /* header in each div*/
-      width: 19% !important;
-      margin:0 auto 3% auto !important;
-  }
-  #advanced-player-course-content h3{
-      width: 33% !important;
-  }
-  #coaches-course-content h3{
-      width: 22% !important;
+
+  .course-header{
+      width: 100% !important;
+      text-align: center;
   }
   .course-content-list button{
        margin: 3% auto 0 auto;
@@ -282,6 +277,35 @@ transition: transform  0.7s ease;
   .course-content-list button:hover{
       background-color: #d1c792;
       color: black;
+  }
+
+    /*== counter div section ==*/
+
+  #counter-section{          /* main container of the 4 divs*/
+      width: 90%;
+      margin: 0 auto 2% auto;
+      height: 150px;
+      display: flex;
+      justify-content:space-between;
+      align-items: center; 
+  }
+  .count{                                   /* each of the 4 divs*/
+      border: 1px solid lightgrey;
+      height: 100%;
+      width: 23%;
+  
+  }
+  .count p{
+      text-align: center;
+  }
+  .count p:first-child{            /* the numbers*/
+      font-size: 48px;
+      color: grey;
+      height: 20%;
+  }
+  .count p:last-child{         /* details about */
+      width: 100%;
+      color: grey;
   }
 
 
@@ -361,9 +385,49 @@ footer{
 
   /* == media queries ==*/
 
+@media all and (max-width:1081px){
+
+                           /*== navigation section ==*/ 
+    nav h1{
+        font-size: 28px;
+        width: 20%;
+    }
+    nav ul{
+        width: 75%;
+    }
+                       /* slider */
+    .slide img{
+        height: 100%;
+    }
+    .arrow{
+        margin-top: 7%;
+    }
+                          /* short info*/
+    #mini-about h2{
+       width: 100%;
+       text-align: center;  
+    }
+    #mini-about p:nth-child(2){
+        width: 100%;
+        text-align: center;
+    }
+    #mini-about a{
+        width: 15%;
+    }
+                              /* about the courses*/
+    #courses-section h3{
+        width: 100%;
+        text-align: center;
+    }
+   
+}  
+
+
+
   @media all and (max-width:320px){
       header{
           height: 40px;
+          width: 100%;
       }
       nav{
           padding-top: 0px;
@@ -500,6 +564,23 @@ footer{
  .course-content-list button{
     width: 80%;
  } 
+
+        /*== the counter divs section  ==*/
+
+ #counter-section{               /*main container*/
+     flex-flow: wrap;
+     justify-content: center;
+     margin-top: 30%;
+     margin-bottom: 50%;
+ }       
+ .count{                    /*each of the divs*/
+     width: 90%;
+     height: 50%;
+ }
+ .count p:first-child{
+     font-size: 20px;
+ }
+ 
 #image-cover{
     margin-top: 28%;
     height: 150px;

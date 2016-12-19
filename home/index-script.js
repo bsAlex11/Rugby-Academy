@@ -105,20 +105,58 @@ $(document).ready(function(){
       /* == back to top == */
       
 var $scrollButton = $("#toTop"),
-    $document = $(document);
-    $document.on("scroll",function(){
-      if( $document.scrollTop() > 150)
+    $window = $(window);
+    $window.on("scroll",showButton);
+
+      function showButton() { 
+      if( $window.scrollTop() > 150)
          $scrollButton.fadeIn();
         else 
         $scrollButton.fadeOut(); 
-    });  
+       
+    }
     
     $scrollButton.on("click",function(){
         $("body").animate({
           scrollTop: 0  
         },
-        { duration: 800});
+        { duration: 1000});
     }); 
    
+     /* counter section */
+
+   $window.on("scroll",theCount);    /* when reaching the counter section*/
+
+    function theCount(){    
+      
+       if($window.scrollTop() > 1420)
+         {
+            $window.off("scroll", theCount);
+            startCounting();                 // call the counter function
+         }
+   } 
+
+$(".toHide").hide();
+$(".toMiddle").css("padding-top","22%");
+
+     function startCounting(){
+
+   var countList = $(".number");
+   $(".toHide").show();
+   $(".toMiddle").css("padding-top","0");
+
+   countList.each(function(){
+   var $this = $(this);      
+     $({Counter:0}).animate({Counter: $this.text()},
+     {
+         duration: 800,
+         ease: "swing",
+         step: function(){
+             $this.text(Math.ceil(this.Counter))
+         }
+     });
+   });
+     }
+        
 
 });
