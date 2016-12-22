@@ -4,6 +4,7 @@ body{
    padding: 0;
    margin: 0; 
 }
+
 header{
     width: 100%;
     height: 55px;
@@ -103,16 +104,21 @@ nav ul li a:hover{
   /*==  the 5 divs with additional info  ==*/
 
  #info-container{           /* the container of the 5 divs, flex to assure the display:  */
+     display: -moz-box; 
      display: flex;
      height: 200px;
      width: 100%;
  }
  .info-section{            /* centering the content and style the 5 divs*/
      height: 100%;
+     -moz-box-flex:1;
+     -webkit-box-flex:1;
      flex: 1;
-     background-color: #161c2c;
+     display: -moz-box; 
      display: flex;
      justify-content: center;
+     -webkit-justify-content:center;
+     background-color: #161c2c;
      padding-top: 4%;
      color: white;
      font-family: 'Orbitron', sans-serif;
@@ -153,14 +159,16 @@ transition: transform  0.7s ease;
     height: 400px;
 }
 #mini-about h2{
-   width: 43%;
+   width: 100%;
+   text-align: center;
    margin: 8% auto 0 auto;
    font-size: 2em;
    color: #161c2c;
    font-family: 'Orbitron', sans-serif;
 }
 #mini-about p:nth-child(2){   /* helping..*/ 
-    width: 17%;
+    width: 100%;
+    text-align: center;
     margin: 1% auto 0 auto;
     color: grey;
     word-spacing: .2em;
@@ -419,10 +427,285 @@ footer{
         width: 100%;
         text-align: center;
     }
-   
 }  
 
+@media all and (max-width:925px){
+    nav h1{
+        width: 0%;              /* site name */
+    }
+    .tokens{                    /* image inside colored divs  */
+        padding-top: 95%;
+    }
+    #mini-about a {
+        width: 20%;
+    }
+}
 
+@media all and (max-width:800px){
+    #footer-list{
+        margin-left: 50%;
+    }
+}
+
+@media all and (max-width:854px){
+     .scale-tokens{
+         margin-top: 45%;
+     }
+}
+
+@media all and (max-width:740px){
+    nav h1{
+        padding: 0;
+        padding-left: 2%;
+        width: 18%;
+    }
+     .scale-tokens{
+         margin-top: 55%;
+     }
+}
+ @media all and (max-width:713px){
+     #mini-about a{
+         width: 24%;
+     }
+     #footer-list{
+         margin-left: -45%;
+     }
+
+}
+
+@media all and (max-width:703px){
+    header{
+        width: auto;
+    }
+     .toMiddle{
+        margin-top: -10%;
+    }
+}
+
+@media all and (max-width:662px){
+    nav{
+        height: 25px;
+    }
+    nav h1{
+        width: 35%;
+        margin: 0;
+        padding-left: 5%;
+    }
+    nav ul{
+          width: 50%;
+          height: 260px;
+          display: flex;
+          flex-flow: column;
+          background-color: #161c2c;
+          box-sizing: border-box;
+          z-index: 1000;
+          position: relative;
+          display: none;
+          margin-top: 48%;
+          margin-right: 5%;
+    }
+        nav ul li{
+          width: 100%;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          padding-top: 10px;
+      }
+      nav ul a{
+          color: white;
+          width: 80%;
+          padding-right: -30%;
+          display: block;
+      }
+    #hamburger-menu{
+        display: block;
+        position: absolute;
+        top: 13%;
+        right: 15%;
+    }
+    #right-arrow{
+        right: 3%;
+    }
+   
+    #info-container{
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-bottom: 45%;
+    }   
+   .info-section{
+       flex: 0 0 33.33%;
+   }
+   .scale-tokens{
+       margin-top: 35%;
+   }
+}
+
+@media all and (max-width:664px){
+     #hamburger-menu{
+         top: 12%;
+     }
+}
+
+@media all and (max-width:623px){
+     #hamburger-menu{
+         top: 12%;
+     }
+     nav{
+         height: 45px;
+     }
+    
+     #footer-list{
+         padding-left: 0;
+     }
+     #social p{
+         margin-right: 15%;
+     }
+}
+
+@media all and (max-width:608px){
+    
+     #mini-about a {
+        width: 25%;  
+     }
+     #courses-section h3{
+         margin-top: 9%;
+     }
+}
+
+@media all and (max-width:585px){
+
+    #hamburger-menu{
+        top: 15%;
+    } 
+    nav ul{
+        margin-top: 58%;
+    }
+        #mini-about a {
+        width: 35%;  
+     }
+     #courses-section{
+         margin-top: -6%;
+     }
+     #courses-section h3{
+         margin-top: 15%;
+     }
+     .course-content-list{
+         margin-top: -9%;
+     }
+     #counter-section{
+         flex-flow: row wrap;
+         margin-bottom: 30%;
+     }
+     .count{
+         flex-basis: 45.55%;
+     }
+    
+}
+
+@media all and (max-width:520px){
+   
+    nav ul{
+        margin-top: 65%;
+    }  
+    #mini-about h2{
+        margin-top: 50%;
+    }
+    #courses-section{
+        margin-top: 20%;
+    }
+    .course-content-list button{
+        width: 50%;
+    }
+    footer{
+        height: 160px;
+        position: relative;
+        margin-top: -5%;
+    }
+   #footer-list{
+       width: 100%;
+       margin: 0;
+       padding: 0;
+       margin-top: 15%;
+       position: absolute;;
+   }
+   #social p{
+       position: absolute;
+       top: 55%;
+       left: 5%;
+       width: 100%;
+       padding: 0;
+   }
+   #toTop{
+       margin-right: 7%;
+   }
+}
+
+@media all and (max-width:475px){
+    
+    nav ul{
+        margin-top: 70%;
+    }
+    #mini-about h2{
+        margin-top: 60%;
+    }
+    #courses-section {
+       margin-top: 25%;
+    }
+    #counter-section{
+        margin-top: 10%;
+        margin-bottom: 33%;
+    }
+}
+
+@media all and (max-width:409px){
+
+    nav ul{
+        margin-top: 82%;
+    }
+    #mini-about a{
+        width: 40%;
+    }
+    #info-container{
+        margin-bottom: 115%;
+    }
+    .info-section{
+        flex-basis: 50%;
+    }
+    #courses-section{
+        margin-top: 45%;
+    }
+    .course-content-list button{
+        height: 60px;
+    }
+   #counter-section{
+       margin-top: 22%;
+       margin-bottom: 38%;
+   }
+   #final-info p{
+       width: 100%;
+       padding: 0;
+       padding-left: 10%;
+   }
+}
+
+@media all and (max-width:378px){
+
+    nav h1{
+        color: red;
+    }
+    nav ul{
+        margin-top: 95%;
+    }
+    #mini-about{
+        margin-top: 135%;
+    }
+    #courses-section{
+        margin-top: 55%;
+        margin-bottom: 35%;
+    }
+    
+}
 
   @media all and (max-width:320px){
       header{
@@ -438,6 +721,7 @@ footer{
           margin: 0;
           padding-top: 12px;
           font-size: 25px;
+          width: 60%;
       }    
       
          /* == the drop-down menu ==*/       
@@ -494,7 +778,7 @@ footer{
      .arrow{                      /* positioning the two control arrows*/
     width: 30px;
     height: 30px;
-    top: 38%;
+    top: 37%;
     margin-left: 4%;
 }
 #right-arrow{
@@ -506,9 +790,11 @@ footer{
 
   /*== the 5 divs with additional info == */
 
-     #info-container{
-         flex-direction: column;
-         height: 360px;
+      #info-container{
+         flex-flow: column nowrap;
+         height: 150px;
+         margin-top: 35%;
+         margin-bottom: -85%;
      }
      .scale-tokens{
          display: none;
@@ -520,25 +806,30 @@ footer{
          padding: 0;
      }
 
+
     /*== the mini about section ==*/
 
  #mini-about h2{    /* welcome to.. */
    width: 100%;
    font-size: 1em;
    text-align: center;
+   margin-top: 4%;
  }
  #mini-about p:nth-child(2){  /* helping create..*/
     width: 60%;
     font-size: 12px;
  }
  #mini-about a{
+     margin-top: 7%;
     width: 55%;
  }    
 
   /*== 3 divs with course options  == */
 
+
 #courses-section {          /* main container */
-    margin-top: 55%;
+    margin-top: 65%;
+    margin-bottom: 65%;
 }
 #courses-section > h3 {      /* featured rugby courses.. */
     width: 100%;
@@ -568,10 +859,10 @@ footer{
         /*== the counter divs section  ==*/
 
  #counter-section{               /*main container*/
-     flex-flow: wrap;
+     flex-flow: column nowrap;
      justify-content: center;
-     margin-top: 30%;
-     margin-bottom: 50%;
+     margin-top: 55%;
+     margin-bottom: 25%;
  }       
  .count{                    /*each of the divs*/
      width: 90%;
@@ -579,6 +870,10 @@ footer{
  }
  .count p:first-child{
      font-size: 20px;
+ }
+ .toMiddle{
+     height: auto;
+     margin-top: 0%;
  }
  
 #image-cover{
@@ -618,10 +913,11 @@ footer{
 #social p{
     margin: 0;
     padding: 0;
-    margin-top: -35%;
+    margin-top: 5%;
     padding-left: 5%;
 }
 #toTop{
     margin-top: -2%;
+    margin-right: 10%;
 }
-  }
+}
