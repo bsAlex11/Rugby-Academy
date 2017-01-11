@@ -157,6 +157,6 @@ $(".toMiddle").css("padding-top","22%");
      });
    });
      }
-   console.log($(window).width());
+  
 
 });

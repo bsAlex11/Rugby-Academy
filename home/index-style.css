@@ -575,6 +575,7 @@ footer{
 
 @media all and (max-width:585px){
 
+
     #hamburger-menu{
         top: 15%;
     } 
@@ -603,8 +604,22 @@ footer{
     
 }
 
+@media all and (max-width:535px){
+ 
+   nav ul{
+       margin-top: 65%;
+   }
+   #hamburger-menu{
+       margin-top: -3%;
+   }
+   #mini-about{
+       margin-bottom: 20%;
+   }
+}
+
 @media all and (max-width:520px){
    
+  
     nav ul{
         margin-top: 65%;
     }  
@@ -641,8 +656,9 @@ footer{
    }
 }
 
+
 @media all and (max-width:475px){
-    
+
     nav ul{
         margin-top: 70%;
     }
@@ -691,9 +707,7 @@ footer{
 
 @media all and (max-width:378px){
 
-    nav h1{
-        color: red;
-    }
+    
     nav ul{
         margin-top: 95%;
     }
