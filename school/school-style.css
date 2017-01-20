@@ -391,7 +391,8 @@ footer {
   width: 50px;
   height: 50px;
   display: none;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 1000; }
 
 /* == media queries ==*/
 @media all and (max-width: 1081px) {
@@ -425,6 +426,10 @@ footer {
   /* about the courses*/
   #courses-section h3 {
     width: 100%;
+    text-align: center; } }
+@media all and (max-width: 947px) {
+  #mini-about a {
+    width: 20%;
     text-align: center; } }
 @media all and (max-width: 925px) {
   nav h1 {
@@ -465,15 +470,16 @@ footer {
     margin-top: -10%; } }
 @media all and (max-width: 662px) {
   nav {
-    height: 25px; }
+    height: 35px; }
 
   nav h1 {
-    width: 35%;
+    width: 32%;
     margin: 0;
-    padding-left: 5%; }
+    padding-left: 5%;
+    padding-bottom: 1%; }
 
   nav ul {
-    width: 50%;
+    width: 70%;
     height: 260px;
     display: flex;
     flex-flow: column;
@@ -482,7 +488,7 @@ footer {
     z-index: 1000;
     position: relative;
     display: none;
-    margin-top: 48%;
+    margin-top: 49%;
     margin-right: 5%; }
 
   nav ul li {
@@ -502,8 +508,8 @@ footer {
   #hamburger-menu {
     display: block;
     position: absolute;
-    top: 13%;
-    right: 15%; }
+    top: 13% !important;
+    right: 16%; }
 
   #right-arrow {
     right: 3%; }
@@ -522,6 +528,9 @@ footer {
   #hamburger-menu {
     top: 12%; } }
 @media all and (max-width: 623px) {
+  nav ul {
+    margin-top: 54%; }
+
   #hamburger-menu {
     top: 12%; }
 
@@ -541,7 +550,7 @@ footer {
     margin-top: 9%; } }
 @media all and (max-width: 585px) {
   #hamburger-menu {
-    top: 15%; }
+    top: 14% !important; }
 
   nav ul {
     margin-top: 58%; }
@@ -566,13 +575,10 @@ footer {
     flex-basis: 45.55%; } }
 @media all and (max-width: 535px) {
   nav ul {
-    margin-top: 65%; }
-
-  #hamburger-menu {
-    margin-top: -3%; }
+    margin-top: 63%; }
 
   #mini-about {
-    margin-bottom: 20%; } }
+    margin-bottom: 23%; } }
 @media all and (max-width: 520px) {
   nav ul {
     margin-top: 65%; }
@@ -620,6 +626,15 @@ footer {
   #counter-section {
     margin-top: 10%;
     margin-bottom: 33%; } }
+@media all and (max-width: 435px) {
+  nav ul {
+    margin-top: 77%; }
+
+  #courses-section {
+    margin-top: 35%; }
+
+  #counter-section {
+    margin-bottom: 37%; } }
 @media all and (max-width: 409px) {
   nav ul {
     margin-top: 82%; }
@@ -641,15 +656,15 @@ footer {
 
   #counter-section {
     margin-top: 22%;
-    margin-bottom: 38%; }
+    margin-bottom: 42%; }
 
   #final-info p {
     width: 100%;
     padding: 0;
     padding-left: 10%; } }
-@media all and (max-width: 378px) {
+@media all and (max-width: 379px) {
   nav ul {
-    margin-top: 95%; }
+    margin-top: 90%; }
 
   #mini-about {
     margin-top: 135%; }
@@ -657,6 +672,102 @@ footer {
   #courses-section {
     margin-top: 55%;
     margin-bottom: 35%; } }
+@media all and (max-width: 358px) {
+  #slider-container {
+    margin-top: 7%;
+    height: 315px; }
+
+  #slider-container div {
+    height: 315px; }
+
+  #slider-container img {
+    max-height: 100%;
+    height: 100%; }
+
+  .arrow {
+    /* positioning the two control arrows*/
+    width: 30px;
+    height: 30px;
+    top: 45%;
+    margin-left: 4%; }
+
+  #right-arrow {
+    margin-left: 86% !important; }
+
+  nav ul {
+    margin-top: 98%; }
+
+  #mini-about a {
+    width: 55%; }
+
+  #counter-section {
+    margin-bottom: 44%; }
+
+  /* footer section*/
+  footer {
+    height: 250px;
+    width: 100%; }
+
+  #final-info {
+    float: none;
+    width: 100%;
+    margin: 0; }
+
+  #final-info p {
+    margin: 0;
+    padding-top: 7%; }
+
+  #footer-list {
+    margin-top: -170px;
+    margin-left: 0;
+    padding: 0;
+    width: 100%;
+    height: 180px;
+    display: flex; }
+
+  #footer-list li a {
+    color: white; }
+
+  #footer-list li {
+    height: 18px;
+    width: 20%;
+    text-align: center; }
+
+  #social p {
+    margin: 0;
+    padding: 0;
+    margin-top: 5%;
+    padding-left: 5%; }
+
+  #toTop {
+    margin-top: -7%;
+    margin-right: 10%; } }
+@media all and (max-width: 332px) {
+  nav ul {
+    margin-top: 105%; }
+
+  #courses-section {
+    margin-top: 75%; }
+
+  #counter-section {
+    margin-top: 50%;
+    margin-bottom: 50%; }
+
+  /*== the 5 divs with additional info == */
+  #info-container {
+    flex-flow: column nowrap;
+    height: 150px;
+    margin-top: 33%;
+    margin-bottom: -85%; }
+
+  .scale-tokens {
+    display: none; }
+
+  .info-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; } }
 @media all and (max-width: 320px) {
   header {
     height: 40px;
@@ -677,7 +788,7 @@ footer {
   #hamburger-menu {
     display: block;
     position: absolute;
-    top: 10%;
+    top: 10% !important;
     right: 5%; }
 
   nav ul {
@@ -690,7 +801,7 @@ footer {
     z-index: 1000;
     position: relative;
     display: none;
-    margin-top: 15px; }
+    margin-top: 3%; }
 
   nav ul li {
     width: 100%;
@@ -1140,7 +1251,8 @@ main {
   background-size: cover;
   position: absolute;
   top: 5%;
-  left: 5%; }
+  left: 5%;
+  box-sizing: border-box; }
 
 #gym {
   background-image: url(images/gym.jpg); }
@@ -1163,7 +1275,73 @@ main {
   height: 100%;
   border-radius: 50%;
   background-color: #d1c792;
-  opacity: .7;
+  opacity: .8;
+  display: none;
+  z-index: 1; }
+
+.description {
+  /*first p inside .facility*/
+  border-bottom: 1px solid white;
+  padding-bottom: 2%;
+  position: absolute;
+  margin: 20% auto 0 10%;
+  width: 80%;
+  color: floralwhite;
+  font-size: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  z-index: 10;
   display: none; }
+
+.second-description {
+  /*second p inside .facility*/
+  position: absolute;
+  margin: 40% auto 0 10%;
+  width: 80%;
+  color: floralwhite;
+  font-size: 24px;
+  text-align: center;
+  z-index: 10;
+  display: none; }
+
+#gym p:nth-child(2) {
+  /*second p inside gym icon*/
+  padding-top: 8%; }
+
+#training-field p:first-child {
+  /* medic text*/
+  border: none;
+  font-size: 24px; }
+
+/*== media querries ==*/
+@media all and (max-width: 1283px) {
+  #gym p:nth-child(2) {
+    /*second p inside gym icon*/
+    padding-top: 15%; } }
+@media all and (max-width: 1208px) {
+  #individual {
+    box-sizing: border-box;
+    height: 100%; }
+
+  #team {
+    height: 100%; } }
+@media all and (max-width: 1081px) {
+  #gym p:nth-child(2) {
+    /*second p inside gym icon*/
+    padding-top: 17%; } }
+@media all and (max-width: 960px) {
+  #each-facility-container div:last-child {
+    margin-top: 2%; }
+
+  .facility-container {
+    width: 30%; }
+
+  .facility {
+    top: 3%; }
+
+  .facility-overlay {
+    margin-top: -.8% !important; } }
+footer {
+  clear: both; }
 
 /*# sourceMappingURL=school-style.css.map */

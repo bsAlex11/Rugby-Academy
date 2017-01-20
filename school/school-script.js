@@ -12,6 +12,13 @@ var $backToTop = $("#toTop");
               duration: 800
            }); 
        });     
+
+       /*== drop-down menu ==*/
+
+    $("#hamburger-menu").on("click",function(){
+
+         $("ul:first").slideToggle();
+    });   
       
     
 
@@ -31,6 +38,23 @@ var $backToTop = $("#toTop");
            }  
             else 
               $backToTop.fadeOut();
+    
+       function isInView(el){
+       
+     var rect = el.getBoundingClientRect();
+       
+          if (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+    ) 
+      console.log("yes");
+       }
+    isInView(document.getElementsByClassName("player-links")[0]);
+
+       
+              // on window width change, check if in viewport 
      
 
       if($this.scrollTop() > 412)
@@ -40,24 +64,24 @@ var $backToTop = $("#toTop");
           $("#scrum").fadeIn(1400);
         }
     
-       if($this.scrollTop() > 930)
+       if($this.scrollTop() > 810)
        {
          $("#player-transition").removeClass("links-transition");
        }
 
-       if($this.scrollTop() > 1313)
+       if($this.scrollTop() > 1030)
          {
            $("#coach-transition").removeClass("links-transition");
          }
 
-         if($this.scrollTop() > 1675)
+         if($this.scrollTop() > 1225)
           {
              $("h1",$facilityHeader).removeClass("moveText");
              $("p",$facilityHeader).removeClass("moveText"); 
 
           }
 
-         if($this.scrollTop() > 1820 && $this.outerWidth() > 957)   // !! to revise 
+         if($this.scrollTop() > 1340 )   // !! to revise 
            {
                setTimeout(function(){
                   var counter = 0;                // show a div per secon after 1 sec wait after page load
@@ -72,7 +96,7 @@ var $backToTop = $("#toTop");
 
                },500);
            } 
-    // console.log($this.scrollTop());   
+    //console.log($this.scrollTop());   
     }
   
 
@@ -82,12 +106,13 @@ var $backToTop = $("#toTop");
         
          function inside(){
             var $this = $(this);
-              $this.find(".facility-overlay").fadeToggle("slow");
+              $this.find(".facility-overlay, p").fadeToggle("slow");
          }
 
          function outside(){
             var $this = $(this);
-           $this.find(".facility-overlay").fadeToggle("slow");
+           $this.find(".facility-overlay, p").fadeToggle("slow");
          }
-   
+
+  
 });
