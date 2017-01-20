@@ -389,6 +389,7 @@ footer{
     height: 50px;
     display: none;
     cursor: pointer;
+    z-index: 1000;
 }
 
   /* == media queries ==*/
@@ -428,6 +429,13 @@ footer{
         text-align: center;
     }
 }  
+
+@media all and (max-width:947px){
+    #mini-about a{
+        width: 20%;
+        text-align: center;
+    }
+}
 
 @media all and (max-width:925px){
     nav h1{
@@ -484,15 +492,17 @@ footer{
 
 @media all and (max-width:662px){
     nav{
-        height: 25px;
+        height: 35px;
     }
     nav h1{
-        width: 35%;
+        width: 32%;
         margin: 0;
         padding-left: 5%;
+        padding-bottom: 1%;
+      
     }
     nav ul{
-          width: 50%;
+          width: 70%;
           height: 260px;
           display: flex;
           flex-flow: column;
@@ -501,7 +511,7 @@ footer{
           z-index: 1000;
           position: relative;
           display: none;
-          margin-top: 48%;
+          margin-top: 49%;
           margin-right: 5%;
     }
         nav ul li{
@@ -521,8 +531,8 @@ footer{
     #hamburger-menu{
         display: block;
         position: absolute;
-        top: 13%;
-        right: 15%;
+        top: 13% !important;
+        right: 16%;
     }
     #right-arrow{
         right: 3%;
@@ -548,6 +558,10 @@ footer{
 }
 
 @media all and (max-width:623px){
+
+    nav ul{
+        margin-top: 54%;
+    }
      #hamburger-menu{
          top: 12%;
      }
@@ -577,7 +591,7 @@ footer{
 
 
     #hamburger-menu{
-        top: 15%;
+        top: 14% !important;
     } 
     nav ul{
         margin-top: 58%;
@@ -607,13 +621,11 @@ footer{
 @media all and (max-width:535px){
  
    nav ul{
-       margin-top: 65%;
+       margin-top: 63%;
    }
-   #hamburger-menu{
-       margin-top: -3%;
-   }
+  
    #mini-about{
-       margin-bottom: 20%;
+       margin-bottom: 23%;
    }
 }
 
@@ -674,6 +686,19 @@ footer{
     }
 }
 
+@media all and (max-width:435px){
+     
+     nav ul{
+         margin-top: 77%;
+     }
+     #courses-section{
+         margin-top: 35%;
+     }
+     #counter-section{
+         margin-bottom: 37%;
+     }
+}
+
 @media all and (max-width:409px){
 
     nav ul{
@@ -696,7 +721,7 @@ footer{
     }
    #counter-section{
        margin-top: 22%;
-       margin-bottom: 38%;
+       margin-bottom: 42%;
    }
    #final-info p{
        width: 100%;
@@ -705,11 +730,11 @@ footer{
    }
 }
 
-@media all and (max-width:378px){
+@media all and (max-width:379px){
 
     
     nav ul{
-        margin-top: 95%;
+        margin-top: 90%;
     }
     #mini-about{
         margin-top: 135%;
@@ -719,6 +744,111 @@ footer{
         margin-bottom: 35%;
     }
     
+}
+@media all and (max-width:358px){
+
+  
+      #slider-container{
+        margin-top: 7%;
+        height: 315px;
+     }
+      #slider-container div{
+         height: 315px;
+     }
+      #slider-container img{
+       max-height:100%;
+       height: 100%;
+     }
+      .arrow{                /* positioning the two control arrows*/
+    width: 30px;
+    height: 30px;
+    top: 45%;
+    margin-left: 4%;
+}
+#right-arrow{
+    margin-left: 86% !important;
+}
+    nav ul{
+        margin-top: 98%;
+    }
+   #mini-about a{
+       width: 55%;
+   } 
+   #counter-section{
+       margin-bottom: 44%;
+   }
+                           /* footer section*/
+footer{
+    height: 250px;
+    width: 100%;
+}
+#final-info{
+    float: none;
+    width: 100%;
+    margin: 0;
+}
+#final-info p{
+    margin: 0;
+    padding-top: 7%;
+}
+#footer-list{
+    margin-top: -170px;
+    margin-left: 0;
+    padding: 0;
+    width: 100%;
+    height: 180px;
+    display: flex;
+}
+#footer-list li a{
+    color:white;
+}
+#footer-list li{
+    height: 18px;
+    width: 20%;
+   text-align: center;
+}
+#social p{
+    margin: 0;
+    padding: 0;
+    margin-top: 5%;
+    padding-left: 5%;
+}
+#toTop{
+    margin-top: -7%;
+    margin-right: 10%;
+}
+
+}
+
+@media all and (max-width:332px){
+
+     nav ul{
+         margin-top: 105%;
+     }
+    #courses-section{
+        margin-top: 75%;
+    }
+    #counter-section{
+        margin-top: 50%;
+        margin-bottom: 50%;
+    }
+     /*== the 5 divs with additional info == */
+
+      #info-container{
+         flex-flow: column nowrap;
+         height: 150px;
+         margin-top: 33%;
+         margin-bottom: -85%;
+     }
+     .scale-tokens{
+         display: none;
+     }
+     .info-section{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         padding: 0;
+     }
 }
 
   @media all and (max-width:320px){
@@ -743,7 +873,7 @@ footer{
       #hamburger-menu{
           display: block;
           position: absolute;
-          top: 10%;
+          top: 10% !important;
           right: 5%;
       }
       nav ul{
@@ -756,7 +886,7 @@ footer{
           z-index: 1000;
           position: relative;
           display: none;
-          margin-top: 15px;
+          margin-top: 3%;
       }
       nav ul li{
           width: 100%;
