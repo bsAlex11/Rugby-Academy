@@ -20,6 +20,34 @@ var $backToTop = $("#toTop");
          $("ul:first").slideToggle();
     });   
       
+
+      
+       function isInView(el){                /* function to check if an element is in the viewport*/
+       
+     var rect = el.getBoundingClientRect();
+       
+          return (
+        rect.top <= (window.outerHeight/1.5) &&
+        rect.bottom /2 <= (window.outerHeight ) 
+    ) 
+      
+       }
+
+         function showFacilities(){          /* shows the facilities section*/
+
+               setTimeout(function(){
+                  var counter = 0;                // show a div per secon after 1 sec wait after page load
+                  setInterval(function(){
+            
+                      $facilityContainerList.eq(counter).fadeIn("1000");
+                      counter++;
+                      if(counter == $facilityContainerList.length)
+                        return;
+
+                  },500)
+
+               },500);
+           }
     
 
     /*== translate the divs on scroll down ==*/
@@ -38,67 +66,41 @@ var $backToTop = $("#toTop");
            }  
             else 
               $backToTop.fadeOut();
-    
-       function isInView(el){
-       
-     var rect = el.getBoundingClientRect();
-       
-          if (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
-    ) 
-      console.log("yes");
-       }
-    isInView(document.getElementsByClassName("player-links")[0]);
 
-       
-              // on window width change, check if in viewport 
-     
+        //== check if specific elems are in viewport to animate them == //
+           
 
-      if($this.scrollTop() > 412)
-        {
-          $("#individual").removeClass("move-individual");
-          $("#team").removeClass("move-team");
-          $("#scrum").fadeIn(1400);
-        }
-    
-       if($this.scrollTop() > 810)
-       {
-         $("#player-transition").removeClass("links-transition");
-       }
+        if(isInView(document.getElementById("individual")))
+              { 
+                 $("#individual").removeClass("move-individual");
+                 $("#team").removeClass("move-team");
+                 $("#scrum").fadeIn(1400);
+               }
 
-       if($this.scrollTop() > 1030)
-         {
-           $("#coach-transition").removeClass("links-transition");
-         }
+        if(isInView(document.getElementById("player-transition")))   
+               {
+                 $("#player-transition").removeClass("links-transition");
 
-         if($this.scrollTop() > 1225)
-          {
-             $("h1",$facilityHeader).removeClass("moveText");
-             $("p",$facilityHeader).removeClass("moveText"); 
+                }
 
-          }
+        if(isInView(document.getElementById("coach-transition")))
+               {
+                 $("#coach-transition").removeClass("links-transition");
+               }   
 
-         if($this.scrollTop() > 1340 )   // !! to revise 
-           {
-               setTimeout(function(){
-                  var counter = 0;                // show a div per secon after 1 sec wait after page load
-                  setInterval(function(){
-            
-                      $facilityContainerList.eq(counter).fadeIn("1000");
-                      counter++;
-                      if(counter == $facilityContainerList.length)
-                        return;
+        if(isInView(document.getElementById("facilities-container")))
+               {
+                 $("h1",$facilityHeader).removeClass("moveText");
+                 $("p",$facilityHeader).removeClass("moveText"); 
+               }
 
-                  },500)
+         if(isInView(document.getElementById("each-facility-container")))  
+               {
+                 showFacilities();
+               } 
+          
 
-               },500);
-           } 
-    //console.log($this.scrollTop());   
     }
-  
 
      //== show content from facilities divs on hover ==//
 
@@ -114,5 +116,5 @@ var $backToTop = $("#toTop");
            $this.find(".facility-overlay, p").fadeToggle("slow");
          }
 
-  
+    
 });
