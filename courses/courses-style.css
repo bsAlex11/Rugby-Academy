@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Orbitron");
 @import url("https://fonts.googleapis.com/css?family=Exo");
 @import url("https://fonts.googleapis.com/css?family=Bitter");
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond");
 @import url("https://fonts.googleapis.com/css?family=Orbitron");
 @import url("https://fonts.googleapis.com/css?family=Exo");
 body {
@@ -974,5 +975,79 @@ footer {
   #toTop {
     margin-top: -2%;
     margin-right: 10%; } }
+#main-container {
+  display: flex;
+  margin-top: 2%; }
+
+#list-container {
+  /* container of courses list*/
+  flex-basis: 30%; }
+  #list-container h1 {
+    width: 70%;
+    margin: 5% auto;
+    font-size: 27px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #161c2c;
+    color: white;
+    height: 40px;
+    line-height: 40px; }
+  #list-container ul {
+    width: 70%;
+    margin: 12% auto 0 auto;
+    box-sizing: border-box;
+    list-style-type: none;
+    padding: 0; }
+    #list-container ul li {
+      width: 95%;
+      padding-left: 5%;
+      text-align: justify;
+      margin-top: 3%;
+      border-bottom: .2px solid grey;
+      padding: 1%;
+      padding-bottom: 4%;
+      font-size: 17px;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      cursor: pointer;
+      transition: padding .5s; }
+      #list-container ul li:hover {
+        padding-left: 3%; }
+      #list-container ul li span {
+        margin-right: 2%; }
+    #list-container ul li:first-child {
+      color: grey; }
+  #list-container span {
+    font-size: 25px; }
+
+/*== courses section  ==*/
+#course-section {
+  flex-basis: 70%;
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 2%; }
+  #course-section h3 {
+    padding-left: 5%;
+    font-size: 26px;
+    color: grey;
+    font-family: 'EB Garamond', serif; }
+  #course-section p {
+    padding-left: 5%;
+    padding-right: 2%;
+    text-align: justify;
+    text-indent: 3%;
+    line-height: 1.5em;
+    font-size: 17px;
+    color: grey;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
+  #course-section ul {
+    color: grey;
+    font-size: 18px;
+    padding-left: 9%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
+    #course-section ul li {
+      margin-bottom: 1%; }
+
+.course-list:not(#beginner-player) {
+  display: none; }
 
 /*# sourceMappingURL=courses-style.css.map */
