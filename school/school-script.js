@@ -123,7 +123,15 @@ var $backToTop = $("#toTop");
 
        function goToPage(){
          window.location.href = "https://htmlpreview.github.io/?https://github.com/bsAlex11/Rugby-Academy/blob/master/courses/courses.html";
-         //"..\courses\courses.html";
+         
+         var $finder = $(this).data("id");
+           
+           $courseList.each(function(i){
+                
+                $courseList.hide();
+                if($finder == $(this).attr("id"))
+                    $(this).show();
+           });
        } 
 
      
