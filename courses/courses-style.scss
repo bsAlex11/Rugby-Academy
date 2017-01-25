@@ -36,11 +36,11 @@ margin-top: 2%;
          box-sizing: border-box;
          list-style-type: none;
          padding: 0;
+         height: auto;
 
          li{
              width: 95%;
              padding-left: 5%;
-             text-align: justify;
              margin-top: 3%;
              border-bottom:.2px solid grey;
              padding: 1%; 
@@ -116,3 +116,45 @@ margin-top: 2%;
     display: none;
 }
 
+
+   /*== media queries ==*/
+
+@media all and (max-width:1048px){
+
+    #list-container{
+         h1{
+             height: auto;
+         }
+    }
+}
+@media all and (max-width:660px){
+
+    nav ul{
+        width: 100%;
+        margin-right: .5%;
+    }
+}
+@media all and (max-width:532px){
+    
+    #list-container h1{
+        width: 100%;
+    }
+}
+@media all and (max-width:517px){
+     
+     #main-container{
+         margin-bottom: 5%;
+         flex-flow: column;
+     }
+     nav ul{
+         margin-right: -4%;
+     }
+
+}  
+@media all and (max-width:320px){
+   
+    nav ul{
+       margin-left: 1%;
+       width: 110%;
+    }
+}
