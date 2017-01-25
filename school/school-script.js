@@ -116,5 +116,39 @@ var $backToTop = $("#toTop");
            $this.find(".facility-overlay, p").fadeToggle("slow");
          }
 
-    
+   //== go to courses page when click on course ==//
+
+      var $buttons = $("button");
+      $buttons.on("click",goToPage);
+
+       function goToPage(){
+         window.location.href = "https://htmlpreview.github.io/?https://github.com/bsAlex11/Rugby-Academy/blob/master/courses/courses.html";
+         //"..\courses\courses.html";
+       } 
+
+     
+
+        //*from courses page */
+     // == show courses on the courses page ==//
+
+     var $optionsList = $("#target").children();
+     var $courseList = $(".course-list");
+      $optionsList.on("click", showCourse);
+
+       function showCourse(){
+          var $this = $(this);
+          var data = $this.data("id");
+          $optionsList.css("color","black");
+          $this.css("color","grey");
+
+        $courseList.each(function(index){
+           var $this = $(this);
+            if($this.attr("id") == data)
+              {
+               $courseList.hide();
+                $this.show();
+              }
+        })
+       }
+       
 });
