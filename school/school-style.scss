@@ -186,10 +186,14 @@ main{
     font-size: 23px;
     
  }
- .player-links button, .coaches-links button{
+ .player-links a, .coaches-links a{
+     text-decoration: none;
+     text-align: center;
      margin: 0 auto;
      width: 85%;
-     display: block;
+     display: flex;
+     justify-content: center;
+     align-items: center;
      height: 50px;
      margin-bottom: 5%;
      background-color: #043a91;
@@ -197,10 +201,11 @@ main{
      border: none;
      outline: none;
      font-size: 19px;
+     font-family: sans-serif;
      cursor: pointer;
      transition: all .4s;
  }
- .player-links button:hover, .coaches-links button:hover{
+ .player-links a:hover, .coaches-links a:hover{
      color: #161c2c;
      background-color: #d1c792;
  }
