@@ -117,7 +117,7 @@ var $scrollButton = $("#toTop"),
     }
     
     $scrollButton.on("click",function(){
-        $("body").animate({
+        $("body,html").animate({
           scrollTop: 0  
         },
         { duration: 1000});

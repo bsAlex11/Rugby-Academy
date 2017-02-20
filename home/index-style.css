@@ -109,28 +109,34 @@ nav ul li a:hover{
      height: 200px;
      width: 100%;
  }
- .info-section{            /* centering the content and style the 5 divs*/
+ #info-container a{         /* centering the content and style the 5 divs*/
+     display: block;
+     height: 120%;
+     flex: 1;
+     text-decoration: none;
+     background-color: #161c2c;
+ }
+  .info-section{            
      height: 100%;
      -moz-box-flex:1;
      -webkit-box-flex:1;
-     flex: 1;
      display: -moz-box; 
      display: flex;
      justify-content: center;
      -webkit-justify-content:center;
-     background-color: #161c2c;
      padding-top: 4%;
      color: white;
      font-family: 'Orbitron', sans-serif;
      font-size: 22px;
      cursor: pointer;
      position: relative;
- }
+ } 
+   
  .info-section p{
      width: auto;
      text-align: center;
  }
- .info-section:nth-child(odd){
+ #info-container a:nth-child(odd){
       background-color: #d1c792;
  }
  .tokens{                 /* image inside each of the 5 divs */
@@ -142,6 +148,7 @@ nav ul li a:hover{
      position: absolute;
      width: 50px;
      margin: 38% auto 0 auto;
+  
  }
  .info-section:hover .tokens{
      transform: translateY(-30px);
@@ -475,6 +482,18 @@ footer{
      #mini-about a{
          width: 24%;
      }
+    #info-container{
+        flex-flow: row wrap;
+        margin-bottom: 45%;
+    } 
+   #info-container a{
+     height: 120%;
+     flex-basis: 33%;
+   }
+   .scale-tokens{
+       margin-top: 20%;
+   }
+
      #footer-list{
          margin-left: -45%;
      }
@@ -501,6 +520,9 @@ footer{
         padding-bottom: 1%;
       
     }
+    nav{
+        margin-bottom: 5%;
+    }
     nav ul{
           width: 70%;
           height: 260px;
@@ -511,7 +533,7 @@ footer{
           z-index: 1000;
           position: relative;
           display: none;
-          margin-top: 49%;
+          margin-top: 360px;
           margin-right: 5%;
     }
         nav ul li{
@@ -560,7 +582,7 @@ footer{
 @media all and (max-width:623px){
 
     nav ul{
-        margin-top: 54%;
+        margin-top: 370px;
     }
      #hamburger-menu{
          top: 12%;
@@ -582,6 +604,9 @@ footer{
      #mini-about a {
         width: 25%;  
      }
+     #info-container{
+         margin-bottom: 55%;
+     }
      #courses-section h3{
          margin-top: 9%;
      }
@@ -594,7 +619,7 @@ footer{
         top: 14% !important;
     } 
     nav ul{
-        margin-top: 58%;
+        margin-top: 365px;
     }
         #mini-about a {
         width: 35%;  
@@ -621,7 +646,7 @@ footer{
 @media all and (max-width:535px){
  
    nav ul{
-       margin-top: 63%;
+       margin-top: 360px;
    }
   
    #mini-about{
@@ -633,7 +658,7 @@ footer{
    
   
     nav ul{
-        margin-top: 65%;
+        margin-top: 360px;
     }  
     #mini-about h2{
         margin-top: 50%;
@@ -668,11 +693,30 @@ footer{
    }
 }
 
+@media all and (max-width:500px){
+ 
+    nav ul{
+        margin-top: 355px;
+    }
+    #info-container{
+        margin-bottom: 115%;
+    }
+    #info-container a{
+        flex-basis: 35%;
+    }
+    .scale-tokens{
+        margin-top: 20%;
+    }
+     
+}
 
 @media all and (max-width:475px){
 
     nav ul{
-        margin-top: 70%;
+        margin-top: 355px;
+    }
+    #info-container{
+        margin-bottom: 130%;
     }
     #mini-about h2{
         margin-top: 60%;
@@ -689,7 +733,7 @@ footer{
 @media all and (max-width:435px){
      
      nav ul{
-         margin-top: 77%;
+         margin-top: 350px;
      }
      #courses-section{
          margin-top: 35%;
@@ -702,13 +746,16 @@ footer{
 @media all and (max-width:409px){
 
     nav ul{
-        margin-top: 82%;
+        margin-top: 345px;
     }
     #mini-about a{
         width: 40%;
     }
     #info-container{
-        margin-bottom: 115%;
+        margin-bottom: 135%;
+    }
+    .scale-tokens{
+        margin-top: 30%;
     }
     .info-section{
         flex-basis: 50%;
@@ -734,7 +781,10 @@ footer{
 
     
     nav ul{
-        margin-top: 90%;
+        margin-top: 345px;
+    }
+    #info-container{
+        margin-bottom: 150%;
     }
     #mini-about{
         margin-top: 135%;
@@ -769,7 +819,7 @@ footer{
     margin-left: 86% !important;
 }
     nav ul{
-        margin-top: 98%;
+        margin-top: 355px;
     }
    #mini-about a{
        width: 55%;
@@ -823,7 +873,7 @@ footer{
 @media all and (max-width:332px){
 
      nav ul{
-         margin-top: 105%;
+         margin-top: 355px;
      }
     #courses-section{
         margin-top: 75%;
@@ -837,8 +887,11 @@ footer{
       #info-container{
          flex-flow: column nowrap;
          height: 150px;
-         margin-top: 33%;
-         margin-bottom: -85%;
+         margin-top: 260px;
+         margin-bottom: -45%;
+     }
+     #info-container a{
+         height: 90%;
      }
      .scale-tokens{
          display: none;
@@ -860,6 +913,7 @@ footer{
           padding-top: 0px;
           display: block;
           height: 60px;
+          margin-bottom: 25px;
           }
       nav h1{
           margin: 0;
@@ -886,7 +940,7 @@ footer{
           z-index: 1000;
           position: relative;
           display: none;
-          margin-top: 3%;
+          margin-top: 15px;
       }
       nav ul li{
           width: 100%;
@@ -938,7 +992,7 @@ footer{
          flex-flow: column nowrap;
          height: 150px;
          margin-top: 35%;
-         margin-bottom: -85%;
+         margin-bottom: -45%;
      }
      .scale-tokens{
          display: none;
