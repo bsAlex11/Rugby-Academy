@@ -31,7 +31,16 @@ $(document).ready(function(){
       function closeModal(event){
           $overlay.hide();
           $modal.hide();
-          $("#modal-header",$modal).remove();
-          $("p",$modal).remove();
+
+         var $list = $("*",$modal).not($close);
+         $list.remove();
       }
+
+
+    var menuButton = $("#hamburger-menu");
+    menuButton.on("click",showMenu);
+
+       function showMenu(){
+           $("ul").first().slideToggle();
+       }
 });

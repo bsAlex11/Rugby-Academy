@@ -76,7 +76,7 @@ main{
          padding: 5px 0;
     }
    li:nth-child(even) span{
-       left: 110%;
+       left: 108%;
        top: -9%;
    } 
    
@@ -86,13 +86,15 @@ main{
 }
  li p{
      padding-right: 5%;
+     line-height: 1.2em;
+     font-size: 17px;
  }
 .hidden{
     display: none;
 }
 
  li div::after{                  /* the arrows */
-  bottom: 13%;
+  bottom: 14%;
   left: 0%;
   content: "";
   border: solid transparent;
@@ -115,7 +117,7 @@ li:nth-child(even) div::after{
 }
 
 
-#time-overlay{
+#time-overlay{                     /*grey overlay*/
     width: 100%;
     height: 100%;
     position: absolute;
@@ -124,9 +126,9 @@ li:nth-child(even) div::after{
     background: black;
     position: fixed;
     opacity: .1;
-    //display: none;
+    display: none;
 }
-#time-modal{
+#time-modal{             /* modal */
     position: fixed;
     top: 15%;
     margin-left: 33%;
@@ -135,7 +137,7 @@ li:nth-child(even) div::after{
     border: 2px solid $site-blue;
     z-index: 10;
     border-radius: 10px;
-    //display: none;
+    display: none;
     #modal-header{
         display: flex;
         span{                  /* year */
@@ -146,7 +148,8 @@ li:nth-child(even) div::after{
             background: $site-blue;
             border-top-left-radius: 8px;
             color: white;
-            font-size: 28px;
+            font-size: 22px;
+            font-family: sans-serif;
         }
         h3{                             /* title in modal */
            flex: 4;
@@ -156,18 +159,22 @@ li:nth-child(even) div::after{
            text-align: center;
            padding: 5% 0;
            margin: 0;
+           font-size: 24px;
+           font-family: sans-serif;
         }
     }
     p{                           /* content of modal */
         background: white;
         line-height: 1.3em;
-        height: 75%;
+        height: 73.5%;
         border-bottom-left-radius: 8px; 
         border-bottom-right-radius: 7px; 
         margin-top: 0;
         padding: 5%;
         text-align: justify;
         text-indent: 25px;
+        font-size: 18px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
       img{                 /* close button */
           width: 45px;
@@ -178,3 +185,246 @@ li:nth-child(even) div::after{
           cursor: pointer;
       }
 }
+
+
+   /*==media queries ==*/
+
+   @media all and (max-width: 1081px){
+
+       #timeline-container{
+
+           li{
+               width: 75%;
+               margin-left: 19%;
+           }
+           li span{
+               margin-left: -8%;
+           }
+           li::before{
+               margin-left: -9%;
+           }
+           li:nth-child(even){
+               left: -35%;
+            } 
+            li:nth-child(even) span{
+               left: 132%;
+            }   
+            li:nth-child(even)::before{
+               left: 138%; 
+            }
+           li div::after{ 
+              left: 1%;
+           }       
+       }   
+   }
+
+     @media all and (max-width: 1024px){
+
+       #timeline-container{
+ 
+           li div::after{ 
+              left: 0%;
+           }      
+       }
+
+       #time-modal{  
+           height: 80%;
+           width: 45%;
+         p{
+             height: 73%;
+            
+         }  
+     }  
+     }
+     @media all and (max-width: 950px){
+
+       #timeline-container{
+ 
+           li div::after{ 
+              left: -1%;
+           }      
+       }
+             #time-modal{  
+          
+         p{
+             height: 75%;  
+         }  
+     } 
+     } 
+
+     @media all and (max-width: 900px){
+         
+         #timeline-container{
+ 
+           li div::after{ 
+              left: -2%;
+           }      
+       }
+     }    
+
+   @media all and (max-width: 850px){
+         
+         #timeline-container{
+ 
+           li div::after{ 
+              left: -3%;
+           }      
+       }
+           #time-modal{  
+          
+         p{
+             height: 77%;  
+         }  
+     }      
+   } 
+
+   @media all and (max-width: 835px){
+        
+         #time-modal{  
+            top: 10%;
+            left: 0%;
+         p{
+             height: 77%;  
+         }  
+     } 
+     #timeline-container{
+ 
+           li div::after{ 
+              left: -4%;
+           }      
+       }  
+   }
+
+   @media all and (max-width: 760px){
+      
+      #timeline-container{
+ 
+           li div::after{ 
+              left: -5%;
+              top: 42%;
+           } 
+           li span{
+               margin-left: -12%;
+           }     
+       }  
+       #time-modal{  
+        
+         p{
+             height: 79%;  
+         }  
+     } 
+   } 
+
+   @media all and (max-width: 730px){
+      
+      #time-modal{  
+        height: 82%;
+        width: 60%;
+        left: -14%;
+         p{
+             height: 75%;  
+         }  
+     }  
+   } 
+
+   @media all and (max-width: 690px){
+      
+        #timeline-container{
+ 
+           li div::after{ 
+              left: -7%;
+           }
+         li::before{
+               margin-left: -10%;
+           }        
+       }
+        #time-modal{  
+         p{
+             height: 76%;  
+         }  
+     }    
+   }
+
+ @media all and (max-width: 661px){
+     
+         #timeline-container{
+ 
+           li div::after{ 
+              left: -9%;
+           }
+        }
+         #time-modal{  
+         p{
+             height: 77%;  
+         }  
+     } 
+    #hamburger-menu{
+        margin-top: -195px;
+    } 
+    nav ul{
+         margin-top: 300px;
+     }    
+ }
+
+   @media all and (max-width: 640px){
+
+        #timeline-container{
+ 
+           li div::after{ 
+              left: -9%;
+           }
+        }
+        #time-modal{  
+         p{
+             height: 78%;  
+         }  
+     }
+     
+   }
+
+   @media all and (max-width: 600px){
+
+       #timeline-container{
+ 
+           li div::after{ 
+              left: -11%;
+           }
+        }
+          #time-modal{  
+         p{
+             height: 79%;  
+         }  
+     }
+     nav ul{
+         margin-top: 320px;
+     }
+   }
+
+   @media all and (max-width: 584px){
+
+       #hamburger-menu{
+           margin-top: -230px;
+       }
+       #timeline-container{
+        margin-top: 15%;
+           li{
+               width: 130%;
+               margin-left: -99%;
+           }
+           li::before{ 
+              left: 135%;
+           } 
+           li:nth-child(even)::before{
+               left: 134.5%;
+           }
+           li span{
+               left: 132%;
+           }
+           li:nth-child(even) span{
+               margin-left: -12%;
+           }
+           ul::before{    
+              left: 71%;
+           }   
+       }    
+   }
