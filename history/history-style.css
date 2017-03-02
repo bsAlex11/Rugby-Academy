@@ -1376,6 +1376,56 @@ main {
     #timeline-container li:nth-child(even) span {
       margin-left: -12%; }
     #timeline-container ul::before {
-      left: 71%; } }
+      left: 71%; }
+    #timeline-container li div::after {
+      left: 114%;
+      transform: rotate(90deg); }
+
+  #hamburger-menu {
+    margin-top: -175px; } }
+@media all and (max-width: 520px) {
+  #time-modal {
+    width: 70%;
+    left: -25%; }
+    #time-modal p {
+      height: 78%; } }
+@media all and (max-width: 478px) {
+  #time-modal p {
+    height: 80%; }
+
+  #hamburger-menu {
+    margin-top: -185px; } }
+@media all and (max-width: 415px) {
+  #time-modal p {
+    height: 82%; }
+
+  #timeline-container li::before {
+    left: 133%; }
+  #timeline-container li:nth-child(even)::before {
+    left: 132%; }
+  #timeline-container li h3 {
+    padding-left: 0; }
+
+  #hamburger-menu {
+    margin-top: -195px; } }
+@media all and (max-width: 382px) {
+  #hamburger-menu {
+    margin-top: -210px; }
+
+  #time-modal {
+    width: 80%; }
+    #time-modal p {
+      height: 81%; } }
+@media all and (max-width: 350px) {
+  #hamburger-menu {
+    margin-top: -225px; }
+
+  #time-modal {
+    left: -29%; }
+    #time-modal p {
+      height: 82%; } }
+@media all and (max-width: 330px) {
+  #hamburger-menu {
+    margin-top: -255px; } }
 
 /*# sourceMappingURL=history-style.css.map */
