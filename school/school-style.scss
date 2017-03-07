@@ -269,11 +269,28 @@ main{
      border-radius: 50%; 
     background-color: #161c2c;
     z-index: 0;
-    display: none;
     float: left;
     margin-left:3%;
     position: relative;
+    transform: scale(0);
  } 
+.animate{
+    animation-name: appear;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+ @keyframes appear{
+     0%{
+         transform: scale(0);
+     }
+     100%{
+        transform: scale(1);
+     }
+ }
+
+
  .facility{                    /* image and text inside the .facility divs*/
      width: 90%;
      height: 90%;
