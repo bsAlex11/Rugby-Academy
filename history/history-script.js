@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+        /*append content to the modal */
+
  var $infoList = $("ul").eq(1).children("li");
  var $modal = $("#time-modal");
  var $overlay = $("#time-overlay");
@@ -36,6 +38,7 @@ $(document).ready(function(){
          $list.remove();
       }
 
+    /* menu button functionality */
 
     var menuButton = $("#hamburger-menu");
     menuButton.on("click",showMenu);
@@ -43,4 +46,22 @@ $(document).ready(function(){
        function showMenu(){
            $("ul").first().slideToggle();
        }
+
+       /* back to top button*/
+
+       var $window = $(window);
+       var toTop = $("#toTop");
+       $window.on("scroll",function(){
+             
+             var $this = $(this);
+             if ($this.scrollTop() > 150)
+                toTop.fadeIn();
+             else 
+               toTop.fadeOut();   
+       });
+
+       toTop.on("click",function(){
+          
+           $("body,html").animate({scrollTop: 0},{duration: 300});
+       });
 });

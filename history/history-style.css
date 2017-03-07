@@ -1418,7 +1418,7 @@ main {
       height: 81%; } }
 @media all and (max-width: 350px) {
   #hamburger-menu {
-    margin-top: -225px; }
+    margin-top: -240px; }
 
   #time-modal {
     left: -29%; }
@@ -1426,6 +1426,31 @@ main {
       height: 82%; } }
 @media all and (max-width: 330px) {
   #hamburger-menu {
-    margin-top: -255px; } }
+    margin-top: -255px; }
+
+  #timeline-container ul::before {
+    left: 90%; }
+  #timeline-container li::before {
+    left: 150%;
+    top: 50%; }
+  #timeline-container li:nth-child(even)::before {
+    left: 149%;
+    top: 50%; }
+  #timeline-container li span {
+    left: 138%; }
+  #timeline-container li:nth-child(even) span {
+    left: 138%; }
+
+  #time-modal {
+    height: 90%;
+    top: 5%; }
+    #time-modal p {
+      height: 84%; } }
+@media all and (max-width: 320px) {
+  #hamburger-menu {
+    margin-top: -180px; }
+
+  nav ul {
+    margin-top: 0px; } }
 
 /*# sourceMappingURL=history-style.css.map */
