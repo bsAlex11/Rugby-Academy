@@ -1,0 +1,296 @@
+@import "contact-style";
+
+$site-blue: #161c2c;
+
+#pitch-container{
+    position: relative;
+     margin-top: 2%;
+     width: 100%;
+     height: 75vh;
+     background-image: url(images/stadium.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+
+     #details-container{
+         width: 100%;
+         height: 100%;
+         position: absolute;
+         top: 0;
+         left: 0;
+         z-index: 10;
+          
+           p{
+               color: white;
+               margin: 3% 0;
+               border-radius: 5px;
+               background: $site-blue;
+               text-indent: 3%;
+               text-align: justify;
+               line-height: 1.5em;
+               font-size: 17px;
+               font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+               padding: 0 17px;
+               
+           }
+     }
+
+     #pitch-overlay{
+         width: 100%;
+         height: 100%;
+         position: absolute;
+         top: 0;
+         left: 0;
+         background-color: black;
+         opacity: .4;
+     }
+}
+ #title{
+     position: relative;
+     margin-top: -1.5%;
+     height: 100px;
+     background-color: $site-blue;
+     color: white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+      p{
+          text-align: center;
+          font-size: 22px;
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+      }
+ }
+ 
+#stadium-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+     .stadiums{
+     height: 220px;
+     flex-basis: 19.8%;
+     position: relative;
+     cursor: pointer;
+      img{
+          max-width: 100%;
+          min-width: 100%;
+          min-height: 100%;
+          position: absolute;
+      }
+      .details-overlay{
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          background: black;
+          opacity: .5;
+          display: none;
+      }
+     .details{
+         width: 100%;
+          height: 100%;
+          position: absolute;
+          color: white;
+          padding-left: 2%;
+          box-sizing: border-box;
+          display: none;
+       p{
+           font-family: sans-serif;
+           font-size: 14px;
+       }
+       p:first-child{
+           text-align: center;
+           font-size: 16px;
+       }
+     } 
+     }
+
+} 
+
+  /*== media queries ==*/
+
+  @media all and (max-width:938px){
+
+    #title{
+        margin-top: 2%;
+    }
+
+  } 
+  @media all and (max-width:884px){
+
+    #title{
+        margin-top: 0%;
+    }
+  }
+  @media all and (max-width:850px){
+
+    #title{
+        margin-top: 4%;
+    }
+
+  }  
+  @media all and (max-width:820px){
+
+    #title{
+        margin-top: 3%;
+    }
+
+     #stadium-container{
+         flex-flow: row wrap;
+         justify-content: space-between;
+         margin-bottom: -2%;
+         .stadiums{
+             flex-basis: 49%;
+             height: 270px;
+             margin-bottom: 15px;
+         }
+     }
+  } 
+@media all and (max-width:786px){
+
+    #title{
+        margin-top: 5%;
+    }
+    #pitch-container{
+       #details-container{
+           p:last-child{
+               margin-top: -1%;
+           }
+       } 
+    }
+  } 
+@media all and (max-width:715px){
+
+    #title{
+        margin-top: 4%;
+    }
+} 
+@media all and (max-width:690px){
+
+    #pitch-container{
+       #details-container{
+           p:last-child{
+               margin-top: -2%;
+           }
+       } 
+    }
+} 
+@media all and (max-width:657px){
+
+    nav ul{
+        margin-top: 320px;
+    }
+} 
+@media all and (max-width:591px){
+    
+     #pitch-container{
+       #details-container{
+           p:last-child{
+               margin-top: -4%;
+           }
+       } 
+    }
+    #title{
+        margin-top: 8%;
+    }
+}
+@media all and (max-width:531px){
+    
+     #title{
+        margin-top: 17%;
+    }
+    #pitch-container{
+        margin-top: 4%;
+    }
+    nav ul{
+        margin-top: 340px;
+    }
+}
+@media all and (max-width:497px){
+   
+    #title{
+        margin-top: 28%;
+    }
+} 
+@media all and (max-width:488px){
+
+      #pitch-container{
+       #details-container{
+           p{
+               margin-top: -1%;
+           }
+       } 
+    }
+    #title{
+        margin-top: 26%;
+    }
+}  
+@media all and (max-width:450px){
+
+      #pitch-container{
+       #details-container{
+           p{
+               margin-top: -2%;
+           }
+       } 
+    }
+}   
+@media all and (max-width:430px){
+     
+       #pitch-container{
+        margin-top: 7%;
+    }
+      #pitch-container{
+       #details-container{
+           p:nth-child(4){
+               margin-top: -4%;
+           }
+       } 
+    }
+    #title{
+        margin-top: 35%;
+    }
+} 
+@media all and (max-width:396px){
+     
+     #title{
+        margin-top: 44%;
+    }
+      #stadium-container{
+          margin-bottom: 1%;
+         .stadiums{
+             flex-basis: 100%;
+             height: 270px;
+             margin: 0 auto 15px auto;
+         }
+     }
+}
+@media all and (max-width:374px){
+
+      #title{
+        margin-top: 52%;
+    }
+} 
+@media all and (max-width:357px){
+
+      #title{
+        margin-top: 68%;
+    }
+} 
+@media all and (max-width:357px){
+
+      #title{
+        margin-top: 85%;
+    }
+} 
+@media all and (max-width:336px){
+
+      #title{
+        margin-top: 100%;
+    }
+} 
+@media all and (max-width:320px){
+     
+     nav ul{
+         margin-top: 20px;
+     }
+}
