@@ -39,12 +39,12 @@ var $backToTop = $("#toTop");
                   var counter = 0;                // show a div per secon after 1 sec wait after page load
                   setInterval(function(){
             
-                      $facilityContainerList.eq(counter).fadeIn("1000");
+                      $facilityContainerList.eq(counter).addClass("animate");
                       counter++;
                       if(counter == $facilityContainerList.length)
                         return;
 
-                  },500)
+                  },300)
 
                },500);
            }
@@ -115,26 +115,7 @@ var $backToTop = $("#toTop");
             var $this = $(this);
            $this.find(".facility-overlay, p").fadeToggle("slow");
          }
-
-   //== go to courses page when click on course ==//
-
-      var $buttons = $("button");
-      $buttons.on("click",goToPage);
-
-       function goToPage(){
-         window.location.href = "https://htmlpreview.github.io/?https://github.com/bsAlex11/Rugby-Academy/blob/master/courses/courses.html";
-         
-         var $finder = $(this).data("id");
-           
-           $courseList.each(function(i){
-                
-                $courseList.hide();
-                if($finder == $(this).attr("id"))
-                    $(this).show();
-           });
-       } 
-
-     
+  
 
         //*from courses page */
      // == show courses on the courses page ==//
@@ -144,6 +125,7 @@ var $backToTop = $("#toTop");
       $optionsList.on("click", showCourse);
 
        function showCourse(){
+
           var $this = $(this);
           var data = $this.data("id");
           $optionsList.css("color","black");
