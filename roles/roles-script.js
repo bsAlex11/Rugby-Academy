@@ -26,6 +26,19 @@ $(document).ready(function(){
             $menu.slideToggle(); 
         });
 
+      
+      /*== accordion  ==*/
 
+     var $accContainer = $("#accordion");
+     var $title = $("h2",$accContainer);
+     var $content = $("p",$accContainer);
+
+       $title.on("click",function(event){
+ 
+            var $this = $(this);         
+
+           $this.next().slideToggle();
+           $this.next().siblings("p").slideUp();
+       }); 
 
 });

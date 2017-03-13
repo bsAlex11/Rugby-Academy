@@ -1149,7 +1149,7 @@ h2 {
   .player-role h5 {
     font-size: 17px;
     padding-left: 20px;
-    transition: padding .3s ease; }
+    transition: padding .5s ease; }
   .player-role p {
     font-size: 15px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -1158,5 +1158,62 @@ h2 {
     text-align: left; }
   .player-role:hover h5 {
     padding-left: 25px; }
+
+#accordion {
+  display: none; }
+
+/*==media queries ==*/
+@media all and (max-width: 750px) {
+  #diagram {
+    width: 90%; }
+
+  .role-line {
+    flex-flow: row wrap;
+    margin-bottom: 0px; }
+
+  .player-role {
+    flex-basis: 95%;
+    margin-bottom: 15px; } }
+@media all and (max-width: 661px) {
+  #hamburger-menu {
+    margin-top: 10px; }
+
+  #wrapper {
+    margin-top: 8%; }
+
+  nav h1 {
+    margin-top: 15px; }
+
+  #diagram {
+    width: 100%;
+    padding: 0 10px 0 10px; } }
+@media all and (max-width: 540px) {
+  #diagram img {
+    width: 100%; } }
+@media all and (max-width: 450px) {
+  .player-role {
+    display: none; }
+
+  #wrapper {
+    margin-bottom: 5%; }
+
+  #accordion {
+    display: block; }
+
+  #accordion h2 {
+    font-size: 18px;
+    cursor: pointer;
+    border-bottom: .5px solid white;
+    position: relative; }
+
+  #accordion p {
+    display: none;
+    margin: 0;
+    padding: 6px;
+    text-align: justify;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-indent: 10px;
+    line-height: 1.3em; } }
 
 /*# sourceMappingURL=roles-style.css.map */
