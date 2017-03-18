@@ -1,0 +1,55 @@
+@import "contact-style";
+
+$site-blue: #161c2c;
+
+@mixin overlay($color){
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: .6;
+    background: $color;
+}
+
+#fan-container{
+    width: 100%;
+    height: 100vh;
+    margin-top: 2%;
+    background-image: url(images/fan.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+
+     #rivalries{
+        // border: 1px solid red;
+         flex-basis: 35%;
+         position: relative;
+         //overflow: hidden;
+            
+         .riv-overlay{
+               @include overlay(black);
+          
+              &::before{
+   content: '';
+  position: absolute;
+  top: 0;
+  left: 87%;
+  transform: translateX(20%) skew(7deg);
+  width: 20%;
+  height: 100%;
+  background: black;
+ 
+              }
+           }
+     } 
+     #riv-description{
+         border: 1px solid red;
+         flex-basis: 45%;
+         position: relative;
+          .riv-overlay{
+               @include overlay(white);
+           }  
+     }
+} 
