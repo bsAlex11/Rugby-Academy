@@ -1102,6 +1102,28 @@ footer {
   #fan-container #rivalries {
     flex-basis: 35%;
     position: relative; }
+    #fan-container #rivalries ul {
+      position: relative;
+      z-index: 10;
+      color: white;
+      list-style: none;
+      margin: 24% 0 0 0;
+      padding: 0;
+      box-sizing: border-box; }
+      #fan-container #rivalries ul li {
+        padding: 0;
+        margin: 0;
+        margin-left: 35%;
+        margin-bottom: 10%;
+        font-size: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        cursor: pointer;
+        transition: font-size .4s ease;
+        box-sizing: border-box;
+        width: 60%;
+        line-height: 26px; }
+        #fan-container #rivalries ul li:hover {
+          font-size: 26px; }
     #fan-container #rivalries .riv-overlay {
       position: absolute;
       width: 100%;
@@ -1120,9 +1142,15 @@ footer {
         height: 100%;
         background: black; }
   #fan-container #riv-description {
-    border: 1px solid red;
     flex-basis: 45%;
-    position: relative; }
+    position: relative;
+    top: 15%;
+    right: 2%;
+    height: 70vh; }
+    #fan-container #riv-description p {
+      position: relative;
+      z-index: 10;
+      color: white; }
     #fan-container #riv-description .riv-overlay {
       position: absolute;
       width: 100%;
@@ -1130,6 +1158,15 @@ footer {
       top: 0;
       left: 0;
       opacity: .6;
-      background: white; }
+      background: #161c2c; }
+      #fan-container #riv-description .riv-overlay::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -10%;
+        transform: translateX(20%) skew(7deg);
+        width: 14%;
+        height: 100%;
+        background: #161c2c; }
 
 /*# sourceMappingURL=fans-style.css.map */

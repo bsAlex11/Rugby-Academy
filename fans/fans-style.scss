@@ -23,33 +23,77 @@ $site-blue: #161c2c;
     justify-content: space-between;
 
      #rivalries{
-        // border: 1px solid red;
          flex-basis: 35%;
          position: relative;
-         //overflow: hidden;
             
+           ul{
+                 position: relative;
+                 z-index: 10;
+                 color: white;
+                 list-style: none;
+                 margin: 24% 0 0 0 ;
+                 padding: 0;
+                 box-sizing: border-box;
+                   
+                   li{
+                         padding: 0;
+                         margin: 0; 
+                         margin-left: 35%;
+                         margin-bottom: 10%;
+                         font-size: 20px;
+                         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                         cursor: pointer;
+                         transition: font-size .4s ease;
+                         box-sizing: border-box;
+                         width: 60%;
+                         line-height: 26px;
+                          &:hover{
+                                font-size: 26px;
+                          }
+                   }
+           } 
          .riv-overlay{
                @include overlay(black);
           
               &::before{
-   content: '';
-  position: absolute;
-  top: 0;
-  left: 87%;
-  transform: translateX(20%) skew(7deg);
-  width: 20%;
-  height: 100%;
-  background: black;
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 87%;
+                transform: translateX(20%) skew(7deg);
+                width: 20%;
+                height: 100%;
+                background: black;
  
               }
            }
      } 
      #riv-description{
-         border: 1px solid red;
+        // border: 1px solid red;
          flex-basis: 45%;
          position: relative;
+         top: 15%;
+         right: 2%;
+         height: 70vh;
+           
+           p{
+              position: relative;
+              z-index: 10;
+              color: white;
+           }
+
           .riv-overlay{
-               @include overlay(white);
+               @include overlay($site-blue);
+                  &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -10%;
+                    transform: translateX(20%) skew(7deg);
+                    width: 14%;
+                    height: 100%;
+                    background:$site-blue;
+              } 
            }  
      }
 } 
