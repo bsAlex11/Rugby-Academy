@@ -1099,74 +1099,119 @@ footer {
   background-size: cover;
   display: flex;
   justify-content: space-between; }
-  #fan-container #rivalries {
-    flex-basis: 35%;
-    position: relative; }
-    #fan-container #rivalries ul {
-      position: relative;
-      z-index: 10;
-      color: white;
-      list-style: none;
-      margin: 24% 0 0 0;
-      padding: 0;
-      box-sizing: border-box; }
-      #fan-container #rivalries ul li {
-        padding: 0;
-        margin: 0;
-        margin-left: 35%;
-        margin-bottom: 10%;
-        font-size: 20px;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        cursor: pointer;
-        transition: font-size .4s ease;
-        box-sizing: border-box;
-        width: 60%;
-        line-height: 26px; }
-        #fan-container #rivalries ul li:hover {
-          font-size: 26px; }
-    #fan-container #rivalries .riv-overlay {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      opacity: .6;
-      background: black; }
-      #fan-container #rivalries .riv-overlay::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 87%;
-        transform: translateX(20%) skew(7deg);
-        width: 20%;
-        height: 100%;
-        background: black; }
-  #fan-container #riv-description {
-    flex-basis: 45%;
+
+#rivalries {
+  flex-basis: 35%;
+  position: relative; }
+  #rivalries ul {
     position: relative;
-    top: 15%;
-    right: 2%;
-    height: 70vh; }
-    #fan-container #riv-description p {
-      position: relative;
-      z-index: 10;
-      color: white; }
-    #fan-container #riv-description .riv-overlay {
+    z-index: 10;
+    color: white;
+    list-style: none;
+    margin: 24% 0 0 0;
+    padding: 0;
+    box-sizing: border-box; }
+    #rivalries ul li {
+      padding: 0;
+      margin: 0;
+      margin-left: 35%;
+      margin-bottom: 10%;
+      font-size: 20px;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      cursor: pointer;
+      transition: font-size .4s ease;
+      box-sizing: border-box;
+      width: 60%;
+      line-height: 26px; }
+      #rivalries ul li:hover {
+        font-size: 26px; }
+  #rivalries .riv-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: .6;
+    background: black; }
+    #rivalries .riv-overlay::before {
+      content: '';
       position: absolute;
-      width: 100%;
-      height: 100%;
       top: 0;
-      left: 0;
-      opacity: .6;
+      left: 87%;
+      transform: translateX(20%) skew(7deg);
+      width: 20%;
+      height: 100%;
+      background: black; }
+
+#riv-description {
+  flex-basis: 45%;
+  position: relative;
+  top: 15%;
+  right: 2%;
+  height: 70vh; }
+  #riv-description .riv-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: .6;
+    background: #161c2c; }
+    #riv-description .riv-overlay::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -10%;
+      transform: translateX(20%) skew(7deg);
+      width: 14%;
+      height: 100%;
       background: #161c2c; }
-      #fan-container #riv-description .riv-overlay::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -10%;
-        transform: translateX(20%) skew(7deg);
-        width: 14%;
-        height: 100%;
-        background: #161c2c; }
+  #riv-description p {
+    position: relative;
+    z-index: 10;
+    color: white;
+    display: none;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.4em;
+    text-indent: 15px;
+    text-align: justify;
+    padding: 5%;
+    box-sizing: border-box; }
+  #riv-description p:nth-child(1) {
+    display: block; }
+
+.clicked {
+  font-size: 26px !important; }
+
+/* ==media queries== */
+@media all and (max-width: 1070px) {
+  #fan-container {
+    height: 120vh; }
+
+  #riv-description {
+    height: 100vh; }
+    #riv-description p {
+      height: 100%; }
+
+  #rivalries .riv-overlay::before {
+    transform: translateX(10%) skew(6deg); } }
+@media all and (max-width: 890px) {
+  #riv-description .riv-overlay::before {
+    transform: translateX(45%) skew(0deg); }
+
+  #rivalries .riv-overlay::before {
+    transform: translateX(10%) skew(0deg); } }
+@media all and (max-width: 822px) {
+  #riv-description {
+    margin-top: -12%;
+    height: 120vh; } }
+@media all and (max-width: 716px) {
+  #riv-description {
+    margin-top: -15%;
+    height: 100%; }
+
+  #fan-container {
+    height: 130vh; } }
 
 /*# sourceMappingURL=fans-style.css.map */
