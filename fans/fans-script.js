@@ -14,7 +14,12 @@ $(document).ready(function(){
            $targetList.each(function(i,elm){
 
                if(data == $(elm).attr("id"))
-                  {  
+                  {   
+                     if($(window).innerWidth() <= 520)
+                         {
+                             var dist =  distance(document.getElementById("riv-description"));                  
+                             $("body,html").animate({scrollTop:dist},{duration:300});
+                        }
                         $targetList.hide();
                         $(elm).fadeIn(500);  
                      $matchList.removeClass("clicked");
@@ -49,5 +54,10 @@ $(document).ready(function(){
         $button.on("click",function(){
             $menu.slideToggle(); 
         });
+
+          function distance(elm){
+              var dim = elm.getBoundingClientRect();
+              return dim.top;
+          }
 
 });

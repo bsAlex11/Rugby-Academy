@@ -1213,5 +1213,75 @@ footer {
 
   #fan-container {
     height: 130vh; } }
+@media all and (max-width: 652px) {
+  #fan-container {
+    margin-top: 5%;
+    height: 140vh; }
+
+  nav h1 {
+    margin-top: 2%; }
+
+  #hamburger-menu {
+    margin-top: 10px; }
+
+  nav ul {
+    margin-top: 360px; } }
+@media all and (max-width: 610px) {
+  #riv-description {
+    margin-top: -20%; }
+
+  #fan-container {
+    height: 160vh; } }
+@media all and (max-width: 560px) {
+  #fan-container {
+    height: 170vh; }
+
+  #riv-description {
+    margin-top: -25%; } }
+@media all and (max-width: 520px) {
+  #fan-container {
+    flex-flow: row wrap;
+    height: 240vh;
+    margin-bottom: 4%; }
+
+  #rivalries {
+    flex-basis: 95%; }
+
+  #riv-description {
+    height: 40%;
+    flex-basis: 95%;
+    margin-top: -35%; } }
+@media all and (max-width: 430px) {
+  nav ul {
+    margin-top: 350px; }
+
+  #riv-description {
+    height: 45%; } }
+@media all and (max-width: 390px) {
+  #riv-description {
+    margin-left: 5%;
+    margin-top: -45%; } }
+@media all and (max-width: 360px) {
+  #fan-container {
+    height: 260vh; }
+
+  #riv-description {
+    margin-top: -55%; } }
+@media all and (max-width: 330px) {
+  #fan-container {
+    height: 280vh;
+    margin-top: 8%; }
+
+  #riv-description {
+    margin-top: -65%; }
+
+  nav ul {
+    margin-top: 360px; } }
+@media all and (max-width: 320px) {
+  nav ul {
+    margin-top: 40px; }
+
+  #riv-description {
+    height: 50%; } }
 
 /*# sourceMappingURL=fans-style.css.map */
