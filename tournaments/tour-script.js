@@ -22,6 +22,7 @@ $(document).ready(function(){
                      $targetList.hide();
                      $(this).show();
                      var toScroll = location(this);
+                     
                      $("body,html").animate({scrollTop : toScroll},{duration:500});
                  } 
            });

@@ -74,11 +74,100 @@ $site-blue: #161c2c;
     width: 10%;
 }
 
-#tour-details > div{
-    display: block;;
+#tour-details{
+    margin-bottom: 0;
 }
 
+#tour-details > div{
+    display: none;
+    margin: 0;
+    padding: 0;
+}   
+  #tour-details p{
+      color: white;
+      background: $site-blue;
+      padding: 15px;
+      text-align: justify;
+      text-indent: 15px;
+      font-size: 16px;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      line-height: 1.4em; 
+      margin-bottom: 0;
+      border-bottom: 1px solid white;
+  }
 
 #accordion{
     display: none;
 }
+
+   /*== media queries ==*/
+
+ @media all and (max-width:800px){
+
+      #tours li p:nth-child(2){
+          padding-left: 20px;
+      }
+ }  
+
+ @media all and (max-width:650px){
+
+     nav h1{
+         margin-top: 2%;
+     }
+     #hamburger-menu{
+         margin-top: 1%;
+     }
+     #tour-container{
+         margin-top: 4%;
+         justify-content: flex-start;
+     }
+      #tours{
+          flex-basis: 55%;
+      }
+ }
+
+ @media all and (max-width:580px){
+
+     #tour-container{
+         flex-flow: row wrap;
+        p{
+            flex-basis: 100%;
+        }
+        #tours{
+            flex-basis: 80%;
+            justify-content: flex-start;
+        }
+       #tours li p:nth-child(2){
+          width: 66%;
+          margin-left:-60%;
+          padding: 0;
+      }
+     }
+ } 
+
+ @media all and (max-width:520px){
+
+    #tour-details{
+        margin-bottom: 5%;
+    }
+ } 
+
+ @media all and (max-width:375px){
+ 
+     #tours{
+         padding-left: 2%;
+         flex-basis: 100%;
+     }   
+    
+    #tours li{
+        justify-content: space-between;
+    }
+       #tours li p:nth-child(2){
+          flex-basis: 85%;
+          margin-left: 15px;
+      }
+      #tours li p:nth-child(1){
+         flex-basis: 15%;
+         margin: 0;
+      }
+ }   
