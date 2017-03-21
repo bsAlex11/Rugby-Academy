@@ -1057,9 +1057,10 @@ main {
     main #gallery-modal #close {
       right: -31%;
       top: -35%; } }
-@media all and (max-width: 661px) {
+@media all and (max-width: 662px) {
   #hamburger-menu {
-    margin-top: -8%; }
+    margin-top: -85px;
+    right: 105px; }
 
   #photo-container {
     margin-top: 5%; }
@@ -1071,7 +1072,7 @@ main {
     flex-basis: 49.2%; }
 
   #hamburger-menu {
-    margin-top: -19%; } }
+    margin-top: -145px; } }
 @media all and (max-width: 550px) {
   main #gallery-modal {
     width: 65%;
@@ -1086,10 +1087,10 @@ main {
       right: -25%; }
 
   #hamburger-menu {
-    margin-top: -24%; } }
+    margin-top: -165px; } }
 @media all and (max-width: 480px) {
   #hamburger-menu {
-    margin-top: -27%; }
+    margin-top: -165px; }
 
   nav ul {
     margin-top: 350px; } }
@@ -1104,10 +1105,11 @@ main {
       height: 16%; }
 
   #hamburger-menu {
-    margin-top: -29%; } }
+    margin-top: -165px; } }
 @media all and (max-width: 400px) {
   #hamburger-menu {
-    margin-top: -67%; }
+    margin-top: -365px;
+    right: 55px; }
 
   nav ul {
     margin-top: 345px; }
@@ -1118,24 +1120,18 @@ main {
       flex-basis: 80%; } }
 @media all and (max-width: 370px) {
   #hamburger-menu {
-    margin-top: -72%; } }
-@media all and (max-width: 359px) {
+    margin-top: -365px; } }
+@media all and (max-width: 352px) {
   #hamburger-menu {
-    margin-top: -73%; } }
-@media all and (max-width: 350px) {
-  #hamburger-menu {
-    margin-top: -79%; } }
-@media all and (max-width: 330px) {
-  #hamburger-menu {
-    margin-top: -86%; } }
+    margin-top: -385px; } }
 @media all and (max-width: 320px) {
   #hamburger-menu {
-    margin-top: -63%; }
+    margin-top: -265px; }
 
   #photo-container {
-    margin-top: 18%; }
+    margin-top: 8%; }
 
   nav ul {
-    margin-top: 42px; } }
+    margin-top: 10px; } }
 
 /*# sourceMappingURL=gallery-style.css.map */
