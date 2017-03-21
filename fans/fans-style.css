@@ -1228,7 +1228,8 @@ footer {
     margin-top: 360px; } }
 @media all and (max-width: 610px) {
   #riv-description {
-    margin-top: -20%; }
+    margin-top: -20%;
+    height: 90%; }
 
   #fan-container {
     height: 160vh; } }
@@ -1237,7 +1238,8 @@ footer {
     height: 170vh; }
 
   #riv-description {
-    margin-top: -25%; } }
+    margin-top: -25%;
+    height: 100%; } }
 @media all and (max-width: 520px) {
   #fan-container {
     flex-flow: row wrap;
