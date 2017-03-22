@@ -58,7 +58,6 @@ $(document).ready(function(){
      /* back to top */
 
      var $toTop = $("#toTop");
-     console.log($toTop);
         $(window).on("scroll",function(){
 
               if($(this).scrollTop() > 100 )
