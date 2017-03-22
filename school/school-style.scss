@@ -406,6 +406,16 @@ main{
       clear: both;
   }
 
+ @media all and (max-width: 770px){
+
+       nav ul li a{
+           //border: 1px solid red;
+           ///flex-basis: 20%;
+           padding-left: 5px;
+           padding-right: 5px;
+       }
+ }
+
   @media all and (max-width: 793px){
   
   .player-links, .coaches-links{ 
