@@ -79,7 +79,7 @@
    background-image: url(images/scrum.jpg);
  }
   #ruck{
-   background-image: url(images/ruck2.jpg);
+   background-image: url(images/ruck3.jpg);
   }
    #maul{
    background-image: url(images/maul.jpg);
@@ -126,6 +126,13 @@
    
 
     /*== media queries ==*/
+     @media all and (max-width: 770px){
+
+       nav ul li a{
+           padding-left: 5px;
+           padding-right: 5px;
+       }
+ }
 
   @media all and (max-width:661px){
 
