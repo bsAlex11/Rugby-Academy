@@ -18,7 +18,7 @@ $(document).ready(function(){
 
       function formSubmit(event){
 
-    //event.preventDefault();
+ event.preventDefault();
 
        if (! (validate($nameInput,"text")))
           {
@@ -79,11 +79,12 @@ $(document).ready(function(){
 
        function end(){
        $("#message").show();
-        setTimeout(function() {
+       setTimeout(function() {
             $("#message").fadeOut();
             location.reload();
-        }, 500);
-       }
+        }, 1500);
+         
+    }
        end();
          
 }
