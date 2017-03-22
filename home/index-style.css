@@ -21,10 +21,11 @@ nav{
     padding-top: 20px;
 }
 nav h1{
-    font-family: 'Audiowide', cursive;
-    font-size: 35px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 32px;
     color: #161c2c;
-    padding:0 24% 0 8%;
+    padding:0 4% 0 3%;
+    flex-basis: 40%;
 }
 nav ul{
     list-style: none;
@@ -33,7 +34,7 @@ nav ul{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 45%;
+    flex-basis:  45%;
 }
 #first{
      background-color: #d1c792;
@@ -190,7 +191,7 @@ transition: transform  0.7s ease;
     text-align: justify;
     font-size: 17px;
     color: grey;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Exo';
 }
 #mini-about a{   /* find out more*/
    text-decoration: none;
@@ -354,7 +355,7 @@ footer{
   float: left;
 }  
 #final-info p{
-   font-family: 'Audiowide', cursive;
+   font-family:  'Orbitron', sans-serif;
    font-size: 22px;
    padding: 2% 0 0 12%;
 }
@@ -409,7 +410,7 @@ footer{
         width: 20%;
     }
     nav ul{
-        width: 75%;
+      flex-basis: 75%;
     }
                        /* slider */
     .slide img{
@@ -456,16 +457,35 @@ footer{
     }
 }
 
-@media all and (max-width:800px){
-    #footer-list{
-        margin-left: 50%;
-    }
-}
+@media all and (max-width:820px){
+
+       nav ul{
+           flex-basis: 80%;
+       }
+
+} 
+
 
 @media all and (max-width:854px){
      .scale-tokens{
          margin-top: 45%;
      }
+}
+
+@media all and (max-width:800px){
+    #footer-list{
+        margin-left: 50%;
+    }
+     nav ul{
+           flex-basis: 85%;
+       }
+}
+
+ @media all and (max-width:785px){
+
+     nav ul{
+           flex-basis: 90%;
+       }
 }
 
 @media all and (max-width:740px){
@@ -517,7 +537,7 @@ footer{
         width: 32%;
         margin: 0;
         padding-left: 5%;
-        padding-bottom: 1%;
+       // padding-bottom: 1%;
       
     }
     nav{
@@ -553,7 +573,7 @@ footer{
     #hamburger-menu{
         display: block;
         position: absolute;
-        top: 13% !important;
+        top: 14% !important;
         right: 16%;
     }
     #right-arrow{
@@ -707,7 +727,9 @@ footer{
     .scale-tokens{
         margin-top: 20%;
     }
-     
+    #final-info p{ 
+       margin: 0;
+    }
 }
 
 @media all and (max-width:475px){
