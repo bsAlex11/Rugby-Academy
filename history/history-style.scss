@@ -231,7 +231,7 @@ li:nth-child(even) div::after{
            height: 80%;
            width: 45%;
          p{
-             height: 73%;
+             height: 79%;
             
          }  
      }  
@@ -247,7 +247,7 @@ li:nth-child(even) div::after{
              #time-modal{  
           
          p{
-             height: 75%;  
+             height: 77%;  
          }  
      } 
      } 
@@ -294,6 +294,14 @@ li:nth-child(even) div::after{
            }      
        }  
    }
+
+      @media all and (max-width: 770px){
+
+       nav ul li a{
+           padding-left: 5px;
+           padding-right: 5px;
+       }
+ }
 
    @media all and (max-width: 760px){
       
@@ -355,11 +363,11 @@ li:nth-child(even) div::after{
         }
          #time-modal{  
          p{
-             height: 77%;  
+             height: 80%;  
          }  
      } 
     #hamburger-menu{
-        margin-top: -195px;
+        margin-top: -210px;
     } 
     nav ul{
          margin-top: 300px;
@@ -376,7 +384,7 @@ li:nth-child(even) div::after{
         }
         #time-modal{  
          p{
-             height: 78%;  
+             height: 84%;  
          }  
      }
      
