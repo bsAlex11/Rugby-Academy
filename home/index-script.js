@@ -40,20 +40,6 @@ $(document).ready(function(){
       $("div:last-child",$container).prependTo($container).fadeIn("slow");    // go to the last one, visible.prev, make it the first in list via prependTo, and show it
       
       startSlide(); 
-
-        /* var $current = $(".slide:visible");    // a first version,not working 100%
-            
-         if ($current.prev().length < 1)
-           { 
-               $current.fadeOut("slow");
-             $(".slide:last").fadeIn("slow");
-           
-           }   
-         else 
-          {
-              $current.fadeOut("slow").
-               prev().fadeIn("slow");
-          }     */
      }
 
 
@@ -65,18 +51,6 @@ $(document).ready(function(){
       .next().fadeIn("slow")
        .end().appendTo($container);
      startSlide(); 
-      /*  var $current = $(".slide:visible");    // a first version,not working 100%
-
-        if($current.next().length < 1)
-         {
-             $current.fadeOut("slow");
-             $(".slide:first").fadeIn("slow");
-         }
-        else 
-        {
-            $current.fadeOut("slow");
-            $current.next().fadeIn("slow");
-        } */
         
     }
    
@@ -152,11 +126,10 @@ $(".toMiddle").css("padding-top","22%");
          duration: 800,
          ease: "swing",
          step: function(){
-             $this.text(Math.ceil(this.Counter))
+             $this.text(Math.ceil(this.Counter));
          }
      });
    });
      }
-  
 
 });
