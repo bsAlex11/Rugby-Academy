@@ -7,7 +7,7 @@ var $backToTop = $("#toTop");
            /*== back to top button  functionality ==*/
 
        $backToTop.on("click", function(){
-           $("body").animate({scrollTop : 0},
+           $("body,html").animate({scrollTop : 0},
            {
               duration: 800
            }); 
