@@ -20,7 +20,7 @@ $(document).ready(function(){
 
  event.preventDefault();
 
-       if (! (validate($nameInput,"text")))
+       if (! (validate($nameInput,"text")))          /* check every input field*/
           {
             event.preventDefault();
           $nameError.addClass("error");
@@ -46,7 +46,8 @@ $(document).ready(function(){
          }
           else $textError.removeClass("error");  
 
-          var data = []; 
+          var data = [];                                       /* store the data from the input fields into an array of objects */
+                                                              /*each object contains the name of the field and the value typed by the user */
         $.each($formList,function(i,val){
             
               var obj = {
@@ -55,27 +56,8 @@ $(document).ready(function(){
               };
             data.push(obj);  
         });
-        var bing = JSON.stringify(data);
+        var bing = JSON.stringify(data);                 /* encode the array into JSON format*/
 
-     //  var data = $form.serializeArray();
-      // data = JSON.stringify(data);
-       
-              //or
-   /*
-          $.ajax({
-               
-              type: "POST",
-              data : bing,
-              url : "#",
-              datatype : "json"
-          })
-           .done(function(data){
-              end();
-           })
-           .fail(function(status,message){
-             console.log("fail");
-           });
-      */ 
 
        function end(){
        $("#message").show();
@@ -89,8 +71,8 @@ $(document).ready(function(){
          
 }
 
-     function validate(element, typeOfInput){
-
+     function validate(element, typeOfInput){                           /*the function takes 2 arguments, the input element and the type of the input element  */
+                                                                       /* it validates the data typed by the user based on the type of the input field*/   
           if(typeOfInput == "text")
             {
                 var pattern = /^[a-zA-Z ]+$/;
@@ -127,7 +109,8 @@ $(document).ready(function(){
              
              $(this).next().removeClass("error");
         }
-
+ 
+             /* back to top */
 
 
       var $backToTop = $("#toTop");
